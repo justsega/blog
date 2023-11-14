@@ -37,12 +37,25 @@ const buildLoaders = ({isDev}: BuildOptions): webpack.RuleSetRule[] => {
                     loader: 'file-loader',
                 },
             ],
+        },
+        babelLoader = {
+            test: /\.(js|jsx|tsx)$/,
+                exclude: /node_modules/,
+                use: {
+                loader: "babel-loader",
+                    options: {
+                    presets: ['@babel/preset-env']
+                }
+            }
         };
+
+
 
 
     return [
         svgLoader,
         fileLoader,
+        babelLoader,
         typescriptLoader,
         cssLoaders,
     ]
