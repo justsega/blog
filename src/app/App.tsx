@@ -12,6 +12,7 @@ function App() {
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback={<div>Loading translations...</div>}>
                 <Navbar />
+
                 <div className="content-page">
                     <Sidebar />
                     <AppRouter />
