@@ -1,6 +1,4 @@
-import type { Config } from 'jest';
-
-const config: Config = {
+export default {
     clearMocks: true,
     testEnvironment: 'jsdom',
     coveragePathIgnorePatterns: [
@@ -190,5 +188,3 @@ const config: Config = {
     // Whether to use watchman for file crawling
     // watchman: true,
 };
-
-export default config;

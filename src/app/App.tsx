@@ -8,19 +8,18 @@ import { Sidebar } from 'widgets/Sidebar';
 
 function App() {
     const { theme } = useTheme();
+
     return (
         <div className={classNames('app', {}, [theme])}>
+            {/* eslint-disable-next-line i18next/no-literal-string */}
             <Suspense fallback={<div>Loading translations...</div>}>
                 <Navbar />
-
                 <div className="content-page">
                     <Sidebar />
                     <AppRouter />
                 </div>
             </Suspense>
-
         </div>
     );
 }
-
 export default App;

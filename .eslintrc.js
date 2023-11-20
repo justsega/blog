@@ -55,6 +55,7 @@ module.exports = {
         'no-underscore-dangle': [0],
         '@typescript-eslint/ban-ts-comment': [0],
         'max-len': [2, { ignoreComments: true }],
+        'react/state-in-constructor': [0],
         indent: [2, 4],
     },
     globals: {

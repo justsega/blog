@@ -4,7 +4,9 @@ import webpack from 'webpack';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BuildOptions } from './types/config';
 
-const buildPlugins = ({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] => [
+const buildPlugins = (
+    { paths, isDev }: BuildOptions,
+): webpack.WebpackPluginInstance[] => [
     new HtmlWebpackPlugin({
         template: paths.html,
     }),
